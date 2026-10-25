@@ -12,4 +12,13 @@ function addStudent(){
     document.getElementById("name").value="";
     document.getElementById("roll").value ="";
 }
+function registerStudent() {
+    let name = prompt("Enter student name");
+    let roll = prompt("Enter roll number");
 
+    if (name && roll) {
+        let li = document.createElement("li");
+        li.textContent = "Name: " + name + ", Roll No: " + roll;
+        document.getElementById("list").appendChild(li);
+    }
+}
