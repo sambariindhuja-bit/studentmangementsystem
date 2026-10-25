@@ -13,3 +13,18 @@ function addStudent(){
     document.getElementById("roll").value ="";
 }
 
+function registerStudent() {
+    let name = prompt("Enter student name");
+    let roll = prompt("Enter roll number");
+
+    if (!name || !roll) {
+        alert("Enter all details");
+        return;
+    }
+
+    let li = document.createElement("li");
+    li.textContent = "Name: " + name + ", Roll No: " + roll;
+    document.getElementById("list").appendChild(li);
+
+    alert("Student registered successfully!");
+}
